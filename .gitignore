@@ -7,11 +7,13 @@ out
 fastapi
 build
 .vscode
-src/renderer/src/pages/idnum-validation.tsx
 src/renderer/src/pages/payment-instructions.tsx
 src/renderer/src/pages/payment.tsx
-src/renderer/src/components
+src/renderer/src/components/*
 src/renderer/src/assets
 src/renderer/src/api
 src/renderer/src/types
+!src/renderer/src/components/back-button.tsx
+!src/renderer/src/components/next-button.tsx
+!src/renderer/src/components/numeric-keyboard
 

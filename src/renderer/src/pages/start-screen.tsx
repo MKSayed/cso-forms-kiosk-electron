@@ -18,19 +18,19 @@ export default function StartScreen() {
       <div className={'pt-[65.8rem]'}>
         <div className={'relative z-20 mr-[20.5rem]'}>
           <img
-            className={'absolute object-contain size-[30.5rem]'}
+            className={'absolute size-[30.5rem] object-contain'}
             src={buttonBg}
             alt={'Start bottom background'}
           />
-          <Link to={'/bsm-allah'}>
+          <Link to={'/idnum-validation'}>
             <img
-              className={'absolute object-contain size-[19rem] top-[8.3rem] right-[4rem]'}
+              className={'absolute right-[4rem] top-[8.3rem] size-[19rem] object-contain'}
               src={startButton}
               alt={'Start button'}
             />
             <span
               className={
-                'absolute text-[#223990] font-bold text-[54px] top-[14.7rem] right-[11.8rem] tracking-[-0.05em]'
+                'absolute right-[11.8rem] top-[14.7rem] text-[54px] font-bold tracking-[-0.05em] text-[#223990]'
               }
             >
               إبدأ

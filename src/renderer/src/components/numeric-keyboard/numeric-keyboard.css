@@ -1,0 +1,10 @@
+.custom-button-container {
+    @apply relative h-[115px] w-[101px] mx-[20.5px] my-[15px] rounded-xl shadow-md border border-[#223990] bg-[#223990] !important;
+}
+.custom-button-container span {
+    @apply absolute bottom-[-2px] right-[7px] text-[72px] leading-none text-white font-poppins !important;
+}
+
+.custom-clear-button {
+  @apply border-[#FF0000] bg-[#FF0000] !important;
+}
