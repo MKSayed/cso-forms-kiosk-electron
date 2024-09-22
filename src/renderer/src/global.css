@@ -131,7 +131,7 @@
     @apply bg-background;
     -webkit-app-region: drag;
   }
-  html{
+  html {
     width: 1080px;
     height: 1920px;
   }
