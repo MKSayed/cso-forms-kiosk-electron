@@ -1,0 +1,3 @@
+provider: generic
+url: http://localhost:8000/update/download-update
+updaterCacheDirName: electron-app-updater

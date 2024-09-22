@@ -1,0 +1,17 @@
+node_modules
+dist
+out
+.DS_Store
+*.log*
+.idea
+fastapi
+build
+.vscode
+src/renderer/src/pages/idnum-validation.tsx
+src/renderer/src/pages/payment-instructions.tsx
+src/renderer/src/pages/payment.tsx
+src/renderer/src/components
+src/renderer/src/assets
+src/renderer/src/api
+src/renderer/src/types
+

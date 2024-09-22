@@ -1,0 +1,17 @@
+/*MKChange 2/6/24*/
+@font-face {
+  font-family: readex;
+  src: url('./assets/fonts/ReadexPro-VariableFont_HEXP,wght.ttf');
+}
+
+/*MKChange 26/7/24*/
+@font-face {
+  font-family: poppins;
+  src: url('./assets/fonts/Poppins-Regular.ttf');
+}
+
+@font-face {
+  font-family: QuickSand;
+  src: url('./assets/fonts/Quicksand-VariableFont_wght.ttf');
+}
+

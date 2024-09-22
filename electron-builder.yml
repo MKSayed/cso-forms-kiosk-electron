@@ -1,0 +1,63 @@
+appId: com.electron.app
+productName: electron-app
+directories:
+  output: dist
+  buildResources: build
+files:
+  - '!**/.vscode/*'
+  - '!src/*'
+  - '!electron.vite.config.{js,ts,mjs,cjs}'
+  - '!{.eslintignore,.eslintrc.cjs,.prettierignore,.prettierrc.yaml,dev-app-update.yml,CHANGELOG.md,README.md}'
+  - '!{.env,.env.*,.npmrc,pnpm-lock.yaml}'
+  - '!{tsconfig.json,tsconfig.node.json,tsconfig.web.json}'
+  - '!fastapi/*'
+  - '!{components.json,postcss.config.js,shadcn.md,tailwind.config.js}'
+#asarUnpack:
+#  - resources/**
+asar: false # Disable asar. This option when disabled exposes the source code to be placed as it is
+# on the client machine after setup, But it allows very small size differentialDownloads. MKChange
+win:
+  target:
+    - nsis
+  executableName: electron-app
+nsis:
+  differentialPackage: true # Allow differential updates (Delta updates). MKChange
+  perMachine: false
+  oneClick: true # Disable "oneClick" for Windows if you want more control when installing  MKChange
+  allowToChangeInstallationDirectory: false # Allow changing installation directory on Windows  MKChange
+  artifactName: ${name}-${version}-setup.${ext}
+  shortcutName: ${productName}
+  uninstallDisplayName: ${productName}
+  createDesktopShortcut: always
+mac:
+  entitlementsInherit: build/entitlements.mac.plist
+  extendInfo:
+    - NSCameraUsageDescription: Application requests access to the device's camera.
+    - NSMicrophoneUsageDescription: Application requests access to the device's microphone.
+    - NSDocumentsFolderUsageDescription: Application requests access to the user's Documents folder.
+    - NSDownloadsFolderUsageDescription: Application requests access to the user's Downloads folder.
+  notarize: false
+dmg:
+  artifactName: ${name}-${version}.${ext}
+linux:
+  target:
+    - AppImage
+    - snap
+    - deb
+  maintainer: MKSayed
+  category: Utility
+appImage:
+  artifactName: ${name}-${version}.${ext}
+npmRebuild: false
+publish: # MKChange
+  provider: generic
+  url: http://localhost:8000/update/download-update
+  'useMultipleRangeRequest':
+    true # Force the electron-updater to get all byte-ranges it needs in a single
+    # request to /update
+
+extraResources: # MKChange
+  - from: './fastapi/executable'
+    to: 'system/data/lib'
+    filter:
+      - '**/*'
