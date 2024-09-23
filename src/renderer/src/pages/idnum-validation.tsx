@@ -138,7 +138,7 @@ export default function idnumValidation() {
                   'fixed bottom-[12.5rem] mt-[10rem] flex w-full justify-between pl-[3.1rem] pr-[3.2rem]'
                 }
               >
-                <NextButton to={'.'} /> {/*TODO replace with route of the next page when ready*/}
+                <NextButton />
                 <BackButton />
               </div>
             </form>
